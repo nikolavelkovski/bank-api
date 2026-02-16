@@ -13,7 +13,7 @@
 >   4. In terminal run npm run db:setup - this will run 2 scripts that will create the database and will seed the data.
 >      Optionally: you can do this manually steps:
 >        1. create a database
->        2.  run sql query to create the table: `
+>        2.  run sql query to create the table: 
 >           CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
             CREATE TABLE IF NOT EXISTS branches (
               id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -25,8 +25,8 @@
               lon DOUBLE PRECISION NOT NULL,
               has_atm BOOLEAN DEFAULT false,
               created_at TIMESTAMP DEFAULT NOW()
-            )`
-          3. run sql query to populate the table:`
+            )
+          3. run sql query to populate the table:
             TRUNCATE TABLE branches RESTART IDENTITY;
             INSERT INTO branches  (name, address, city, working_hours, lat, lon, has_atm)
             VALUES
@@ -34,7 +34,7 @@
             ('Airport Branch', 'Airport Road 12', 'Skopje', '08:00 - 16:00', 41.9616, 21.6214, false),
             ('Bitola Branch', 'Shirok Sokak 45', 'Bitola', '09:00 - 17:00', 41.0297, 21.3292, true),
             ('Kumanovo Branch', 'Versajska 45', 'Bitola', '09:00 - 17:00', 47.0297, 25.3292, false);
-          `
+          
 >   5. In terminal run npm run dev
 >    
 >## Routes
